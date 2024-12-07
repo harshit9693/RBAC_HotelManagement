@@ -1,36 +1,96 @@
-RBAC System for Hotel Management Application (Airbnb-like)
+# 🏨 Role-Based Access Control (RBAC) System for Hotel Management Application  
 
-In this project, we have implemented a Role-Based Access Control (RBAC) system for a hotel management application inspired by Airbnb. The system includes three main roles: Admin, Manager, and User, each with distinct permissions and capabilities.
+Welcome to the **Hotel Management Application** — an Airbnb-inspired project with a secure and efficient **Role-Based Access Control (RBAC)** system. This application ensures that every user, from Admins to Guests, interacts with features and data based on their role.  
 
-Admin Role
-The Admin has the highest level of access within the system. Key responsibilities and permissions include:
+---
 
-User Management: The Admin can access all user data, update or delete user profiles, and activate or deactivate user accounts.
-Property Management: The Admin can add, update, or delete properties. Admins are also responsible for assigning Managers to specific properties.
-Manager Assignment: The Admin assigns managers to properties, ensuring each manager is responsible for the operations and management of a particular property.
-Admins also have full control over permissions, meaning they can grant or restrict specific actions for other roles, such as whether a manager can access rental logs or view the property's revenue.
+## 🚀 Key Features  
 
-Manager Role
-The Manager role is limited to the properties they are assigned to by the Admin. Responsibilities include:
+### 🔑 **Admin Role**: The Powerhouse  
+Admins have the highest level of control and can:  
+- **User Management**:  
+  - View, update, or delete user accounts.  
+  - Activate or deactivate user profiles.  
+- **Property Management**:  
+  - Add, edit, or remove properties from the system.  
+  - Assign Managers to specific properties.  
+- **Permission Control**:  
+  - Grant or restrict permissions for Managers (e.g., access to revenue or rental logs).  
 
-Property Information Management: Managers can update and manage property information, such as availability and details about the property.
-Rental Logs and Revenue Management: Depending on the permissions granted by the Admin, Managers may access past rental logs, view revenue generation, and check the overall performance of the property.
-Booking Management: Managers track and monitor bookings for their assigned properties.
-However, Managers cannot view or manage data related to properties they are not assigned to. This ensures that access is restricted to the specific properties under their control.
+---
 
-User Role
-The User role provides limited access. Users can:
+### 🏠 **Manager Role**: The Property Specialist  
+Managers are responsible for specific properties assigned by Admins:  
+- **Property Management**:  
+  - Update details like availability, amenities, and descriptions.  
+- **Booking Oversight**:  
+  - Track and monitor bookings for assigned properties.  
+- **Revenue Insights**:  
+  - (If permitted) View past rental logs and revenue reports.  
 
-View Property Information: Users can browse available properties, view details, and book properties for a specified number of days.
-Property Booking: Users can only book properties and are restricted from viewing sensitive property data or modifying it.
-Security Features
-To enhance security and ensure that only authorized users can access sensitive information, several key security measures have been implemented:
+> 🛑 **Access Restriction**: Managers can only manage properties they are assigned to.  
 
-JWT Authentication: A secure login system using JSON Web Tokens (JWT) ensures that users are authenticated before accessing any protected routes.
-Role Management: Each user is assigned a specific role (Admin, Manager, User), and based on their role, they are granted specific permissions to access certain features of the application.
-Protected Routes: Routes that require authentication or specific roles to access are protected, preventing unauthorized access to confidential data.
-Encrypted Passwords: All passwords are encrypted using a secure hashing algorithm, ensuring that user credentials are stored safely and reducing the risk of data breaches.
-Robust Backend and Frontend
-The application is built with a robust backend that handles user management, property management, and role-based access control, ensuring smooth and secure operation. The frontend provides an intuitive interface for users to interact with the system, making it easy for them to browse properties, make bookings, and view relevant information. Admins and Managers have separate dashboards that provide them with the necessary tools and permissions to manage users and properties effectively.
+---
 
-In conclusion, this RBAC system with secure login, role management, encrypted passwords, and protected routes ensures that users have appropriate access levels based on their roles while maintaining the integrity and security of sensitive data. This project not only demonstrates a robust backend and frontend design but also showcases advanced security measures to protect the application from unauthorized access.
+### 👤 **User Role**: The Guest  
+Users interact with the system to explore and book properties:  
+- **Browse Properties**:  
+  - Search for available properties and view detailed information.  
+- **Property Booking**:  
+  - Book properties for desired dates.  
+
+> 🚫 **Access Restriction**: Users cannot access or modify sensitive property data.  
+
+---
+
+## 🔒 Security Features  
+
+Our application prioritizes security with robust features:  
+
+- **JWT Authentication**:  
+  - Secure login using JSON Web Tokens ensures only authenticated users access protected routes.  
+- **Role Management**:  
+  - Users are assigned roles (Admin, Manager, or User), granting them specific permissions.  
+- **Protected Routes**:  
+  - Sensitive data is accessible only to authorized users based on their roles.  
+- **Encrypted Passwords**:  
+  - Passwords are securely stored using hashing algorithms to prevent breaches.  
+
+---
+
+## 🛠️ Tech Stack  
+
+- **Frontend**:  
+  - Intuitive user interface for seamless browsing, booking, and management.  
+  - Separate dashboards for Admins and Managers.  
+- **Backend**:  
+  - Powerful backend handling user authentication, property management, and RBAC.  
+- **Database**:  
+  - Secure storage of user, property, and booking data.  
+
+---
+
+## 📊 Admin and Manager Dashboards  
+
+- **Admin Dashboard**:  
+  - Comprehensive tools for managing users, properties, and permissions.  
+- **Manager Dashboard**:  
+  - Focused controls for monitoring assigned properties and bookings.  
+
+---
+
+## 🎯 Conclusion  
+
+This **RBAC System for Hotel Management** is a secure, scalable, and user-friendly solution. With advanced role-based access control, encrypted data, and an intuitive interface, the application ensures proper data management and access integrity.  
+
+---
+
+## 📂 Project Structure  
+
+- **Frontend**:  
+  - React-based interface for user interactions.  
+- **Backend**:  
+  - Node.js and Express.js for API development.  
+- **Database**:  
+  - MongoDB for robust and flexible data storage.  
+
